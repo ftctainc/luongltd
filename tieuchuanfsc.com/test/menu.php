@@ -1,0 +1,1 @@
+<cms:menu masterpage='menu.php' depth='1' />
