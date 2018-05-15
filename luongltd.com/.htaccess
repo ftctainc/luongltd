@@ -1,0 +1,136 @@
+Options +SymLinksIfOwnerMatch -MultiViews
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+#If your website is installed in a subfolder, change the line below to reflect the path to the subfolder.
+#e.g. for http://www.example.com/subdomain1/subdomain2/ make it RewriteBase /subdomain1/subdomain2
+RewriteBase /
+
+#If you wish to use a custom 404 page, place a file named 404.php in your website's root and uncomment the line below.
+#If your website is installed in a subfolder, change the line below to reflect the path to the subfolder.
+#e.g. for http://www.example.com/subdomain1/subdomain2/ make it ErrorDocument 404 /subdomain1/subdomain2/404.php
+#ErrorDocument 404 /404.php
+
+#If your site begins with 'www', uncomment the following two lines
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+
+#DO NOT EDIT BELOW THIS
+
+RewriteRule ^index.php$ "" [R=301,L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule . - [L]
+
+#users.php
+RewriteRule ^users$ "$0/" [R=301,L,QSA]
+RewriteRule ^users/$ users.php [L,QSA]
+RewriteRule ^users/.*?([^\.\/]*)\.html$ users.php?pname=$1 [L,QSA]
+RewriteRule ^users/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ users.php?d=$1$2$3 [L,QSA]
+RewriteRule ^users/[^\.]*?([^/\.]*)/$ users.php?fname=$1 [L,QSA]
+RewriteRule ^users/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#users-configuration.php
+RewriteRule ^users-configuration$ "$0/" [R=301,L,QSA]
+RewriteRule ^users-configuration/$ users-configuration.php [L,QSA]
+RewriteRule ^users-configuration/.*?([^\.\/]*)\.html$ users-configuration.php?pname=$1 [L,QSA]
+RewriteRule ^users-configuration/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ users-configuration.php?d=$1$2$3 [L,QSA]
+RewriteRule ^users-configuration/[^\.]*?([^/\.]*)/$ users-configuration.php?fname=$1 [L,QSA]
+RewriteRule ^users-configuration/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#slider-generate.php
+RewriteRule ^slider-generate$ "$0/" [R=301,L,QSA]
+RewriteRule ^slider-generate/$ slider-generate.php [L,QSA]
+RewriteRule ^slider-generate/.*?([^\.\/]*)\.html$ slider-generate.php?pname=$1 [L,QSA]
+RewriteRule ^slider-generate/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ slider-generate.php?d=$1$2$3 [L,QSA]
+RewriteRule ^slider-generate/[^\.]*?([^/\.]*)/$ slider-generate.php?fname=$1 [L,QSA]
+RewriteRule ^slider-generate/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#menu.php
+RewriteRule ^menu$ "$0/" [R=301,L,QSA]
+RewriteRule ^menu/$ menu.php [L,QSA]
+RewriteRule ^menu/.*?([^\.\/]*)\.html$ menu.php?pname=$1 [L,QSA]
+RewriteRule ^menu/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ menu.php?d=$1$2$3 [L,QSA]
+RewriteRule ^menu/[^\.]*?([^/\.]*)/$ menu.php?fname=$1 [L,QSA]
+RewriteRule ^menu/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#globals.php
+RewriteRule ^globals$ "$0/" [R=301,L,QSA]
+RewriteRule ^globals/$ globals.php [L,QSA]
+RewriteRule ^globals/.*?([^\.\/]*)\.html$ globals.php?pname=$1 [L,QSA]
+RewriteRule ^globals/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ globals.php?d=$1$2$3 [L,QSA]
+RewriteRule ^globals/[^\.]*?([^/\.]*)/$ globals.php?fname=$1 [L,QSA]
+RewriteRule ^globals/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#gioi-thieu-cong-ty.php
+RewriteRule ^gioi-thieu-cong-ty$ "$0/" [R=301,L,QSA]
+RewriteRule ^gioi-thieu-cong-ty/$ gioi-thieu-cong-ty.php [L,QSA]
+RewriteRule ^gioi-thieu-cong-ty/.*?([^\.\/]*)\.html$ gioi-thieu-cong-ty.php?pname=$1 [L,QSA]
+RewriteRule ^gioi-thieu-cong-ty/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ gioi-thieu-cong-ty.php?d=$1$2$3 [L,QSA]
+RewriteRule ^gioi-thieu-cong-ty/[^\.]*?([^/\.]*)/$ gioi-thieu-cong-ty.php?fname=$1 [L,QSA]
+RewriteRule ^gioi-thieu-cong-ty/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#dich-vu-tu-van.php
+RewriteRule ^dich-vu-tu-van$ "$0/" [R=301,L,QSA]
+RewriteRule ^dich-vu-tu-van/$ dich-vu-tu-van.php [L,QSA]
+RewriteRule ^dich-vu-tu-van/.*?([^\.\/]*)\.html$ dich-vu-tu-van.php?pname=$1 [L,QSA]
+RewriteRule ^dich-vu-tu-van/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ dich-vu-tu-van.php?d=$1$2$3 [L,QSA]
+RewriteRule ^dich-vu-tu-van/[^\.]*?([^/\.]*)/$ dich-vu-tu-van.php?fname=$1 [L,QSA]
+RewriteRule ^dich-vu-tu-van/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#dich-vu-dao-tao.php
+RewriteRule ^dich-vu-dao-tao$ "$0/" [R=301,L,QSA]
+RewriteRule ^dich-vu-dao-tao/$ dich-vu-dao-tao.php [L,QSA]
+RewriteRule ^dich-vu-dao-tao/.*?([^\.\/]*)\.html$ dich-vu-dao-tao.php?pname=$1 [L,QSA]
+RewriteRule ^dich-vu-dao-tao/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ dich-vu-dao-tao.php?d=$1$2$3 [L,QSA]
+RewriteRule ^dich-vu-dao-tao/[^\.]*?([^/\.]*)/$ dich-vu-dao-tao.php?fname=$1 [L,QSA]
+RewriteRule ^dich-vu-dao-tao/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#chi-tiet-tu-van.php
+RewriteRule ^chi-tiet-tu-van$ "$0/" [R=301,L,QSA]
+RewriteRule ^chi-tiet-tu-van/$ chi-tiet-tu-van.php [L,QSA]
+RewriteRule ^chi-tiet-tu-van/.*?([^\.\/]*)\.html$ chi-tiet-tu-van.php?pname=$1 [L,QSA]
+RewriteRule ^chi-tiet-tu-van/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ chi-tiet-tu-van.php?d=$1$2$3 [L,QSA]
+RewriteRule ^chi-tiet-tu-van/[^\.]*?([^/\.]*)/$ chi-tiet-tu-van.php?fname=$1 [L,QSA]
+RewriteRule ^chi-tiet-tu-van/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#chi-tiet-to-chuc-chung-nhan.php
+RewriteRule ^chi-tiet-to-chuc-chung-nhan$ "$0/" [R=301,L,QSA]
+RewriteRule ^chi-tiet-to-chuc-chung-nhan/$ chi-tiet-to-chuc-chung-nhan.php [L,QSA]
+RewriteRule ^chi-tiet-to-chuc-chung-nhan/.*?([^\.\/]*)\.html$ chi-tiet-to-chuc-chung-nhan.php?pname=$1 [L,QSA]
+RewriteRule ^chi-tiet-to-chuc-chung-nhan/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ chi-tiet-to-chuc-chung-nhan.php?d=$1$2$3 [L,QSA]
+RewriteRule ^chi-tiet-to-chuc-chung-nhan/[^\.]*?([^/\.]*)/$ chi-tiet-to-chuc-chung-nhan.php?fname=$1 [L,QSA]
+RewriteRule ^chi-tiet-to-chuc-chung-nhan/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#chi-tiet-tin-tuc.php
+RewriteRule ^chi-tiet-tin-tuc$ "$0/" [R=301,L,QSA]
+RewriteRule ^chi-tiet-tin-tuc/$ chi-tiet-tin-tuc.php [L,QSA]
+RewriteRule ^chi-tiet-tin-tuc/.*?([^\.\/]*)\.html$ chi-tiet-tin-tuc.php?pname=$1 [L,QSA]
+RewriteRule ^chi-tiet-tin-tuc/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ chi-tiet-tin-tuc.php?d=$1$2$3 [L,QSA]
+RewriteRule ^chi-tiet-tin-tuc/[^\.]*?([^/\.]*)/$ chi-tiet-tin-tuc.php?fname=$1 [L,QSA]
+RewriteRule ^chi-tiet-tin-tuc/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#chi-tiet-san-pham.php
+RewriteRule ^chi-tiet-san-pham$ "$0/" [R=301,L,QSA]
+RewriteRule ^chi-tiet-san-pham/$ chi-tiet-san-pham.php [L,QSA]
+RewriteRule ^chi-tiet-san-pham/.*?([^\.\/]*)\.html$ chi-tiet-san-pham.php?pname=$1 [L,QSA]
+RewriteRule ^chi-tiet-san-pham/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ chi-tiet-san-pham.php?d=$1$2$3 [L,QSA]
+RewriteRule ^chi-tiet-san-pham/[^\.]*?([^/\.]*)/$ chi-tiet-san-pham.php?fname=$1 [L,QSA]
+RewriteRule ^chi-tiet-san-pham/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#chi-tiet-khach-hang.php
+RewriteRule ^chi-tiet-khach-hang$ "$0/" [R=301,L,QSA]
+RewriteRule ^chi-tiet-khach-hang/$ chi-tiet-khach-hang.php [L,QSA]
+RewriteRule ^chi-tiet-khach-hang/.*?([^\.\/]*)\.html$ chi-tiet-khach-hang.php?pname=$1 [L,QSA]
+RewriteRule ^chi-tiet-khach-hang/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ chi-tiet-khach-hang.php?d=$1$2$3 [L,QSA]
+RewriteRule ^chi-tiet-khach-hang/[^\.]*?([^/\.]*)/$ chi-tiet-khach-hang.php?fname=$1 [L,QSA]
+RewriteRule ^chi-tiet-khach-hang/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#index.php
+RewriteRule ^.*?([^\.\/]*)\.html$ ?pname=$1 [L,QSA]
+RewriteRule ^([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ ?d=$1$2$3 [L,QSA]
+RewriteRule ^[^\.]*?([^/\.]*)/$ ?fname=$1 [L,QSA]
+RewriteRule ^\w[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+</IfModule>
