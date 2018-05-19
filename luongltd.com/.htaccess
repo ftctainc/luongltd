@@ -56,6 +56,14 @@ RewriteRule ^menu/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1
 RewriteRule ^menu/[^\.]*?([^/\.]*)/$ menu.php?fname=$1 [L,QSA]
 RewriteRule ^menu/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
 
+#he-thong-phan-mem-quan-ly.php
+RewriteRule ^he-thong-phan-mem-quan-ly$ "$0/" [R=301,L,QSA]
+RewriteRule ^he-thong-phan-mem-quan-ly/$ he-thong-phan-mem-quan-ly.php [L,QSA]
+RewriteRule ^he-thong-phan-mem-quan-ly/.*?([^\.\/]*)\.html$ he-thong-phan-mem-quan-ly.php?pname=$1 [L,QSA]
+RewriteRule ^he-thong-phan-mem-quan-ly/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ he-thong-phan-mem-quan-ly.php?d=$1$2$3 [L,QSA]
+RewriteRule ^he-thong-phan-mem-quan-ly/[^\.]*?([^/\.]*)/$ he-thong-phan-mem-quan-ly.php?fname=$1 [L,QSA]
+RewriteRule ^he-thong-phan-mem-quan-ly/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
 #globals.php
 RewriteRule ^globals$ "$0/" [R=301,L,QSA]
 RewriteRule ^globals/$ globals.php [L,QSA]
@@ -127,6 +135,30 @@ RewriteRule ^chi-tiet-khach-hang/.*?([^\.\/]*)\.html$ chi-tiet-khach-hang.php?pn
 RewriteRule ^chi-tiet-khach-hang/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ chi-tiet-khach-hang.php?d=$1$2$3 [L,QSA]
 RewriteRule ^chi-tiet-khach-hang/[^\.]*?([^/\.]*)/$ chi-tiet-khach-hang.php?fname=$1 [L,QSA]
 RewriteRule ^chi-tiet-khach-hang/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#chi-tiet-hinh-anh-hoat-dong.php
+RewriteRule ^chi-tiet-hinh-anh-hoat-dong$ "$0/" [R=301,L,QSA]
+RewriteRule ^chi-tiet-hinh-anh-hoat-dong/$ chi-tiet-hinh-anh-hoat-dong.php [L,QSA]
+RewriteRule ^chi-tiet-hinh-anh-hoat-dong/.*?([^\.\/]*)\.html$ chi-tiet-hinh-anh-hoat-dong.php?pname=$1 [L,QSA]
+RewriteRule ^chi-tiet-hinh-anh-hoat-dong/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ chi-tiet-hinh-anh-hoat-dong.php?d=$1$2$3 [L,QSA]
+RewriteRule ^chi-tiet-hinh-anh-hoat-dong/[^\.]*?([^/\.]*)/$ chi-tiet-hinh-anh-hoat-dong.php?fname=$1 [L,QSA]
+RewriteRule ^chi-tiet-hinh-anh-hoat-dong/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#chi-tiet-cau-hoi-thuong-gap.php
+RewriteRule ^chi-tiet-cau-hoi-thuong-gap$ "$0/" [R=301,L,QSA]
+RewriteRule ^chi-tiet-cau-hoi-thuong-gap/$ chi-tiet-cau-hoi-thuong-gap.php [L,QSA]
+RewriteRule ^chi-tiet-cau-hoi-thuong-gap/.*?([^\.\/]*)\.html$ chi-tiet-cau-hoi-thuong-gap.php?pname=$1 [L,QSA]
+RewriteRule ^chi-tiet-cau-hoi-thuong-gap/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ chi-tiet-cau-hoi-thuong-gap.php?d=$1$2$3 [L,QSA]
+RewriteRule ^chi-tiet-cau-hoi-thuong-gap/[^\.]*?([^/\.]*)/$ chi-tiet-cau-hoi-thuong-gap.php?fname=$1 [L,QSA]
+RewriteRule ^chi-tiet-cau-hoi-thuong-gap/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#cau-hoi-thuong-gap.php
+RewriteRule ^cau-hoi-thuong-gap$ "$0/" [R=301,L,QSA]
+RewriteRule ^cau-hoi-thuong-gap/$ cau-hoi-thuong-gap.php [L,QSA]
+RewriteRule ^cau-hoi-thuong-gap/.*?([^\.\/]*)\.html$ cau-hoi-thuong-gap.php?pname=$1 [L,QSA]
+RewriteRule ^cau-hoi-thuong-gap/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ cau-hoi-thuong-gap.php?d=$1$2$3 [L,QSA]
+RewriteRule ^cau-hoi-thuong-gap/[^\.]*?([^/\.]*)/$ cau-hoi-thuong-gap.php?fname=$1 [L,QSA]
+RewriteRule ^cau-hoi-thuong-gap/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
 
 #index.php
 RewriteRule ^.*?([^\.\/]*)\.html$ ?pname=$1 [L,QSA]
