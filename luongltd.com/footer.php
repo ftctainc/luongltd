@@ -77,7 +77,7 @@
         <div class="footer-bottom animated fadeInDown clearfix">
             <div class="row">
                 <div class="col-sm-7">
-                    <p>&copy; Copyright 2016. All Rights Reserved by Medical Press</p>
+                    <p>&copy; Copyright 2008 - 2017 Luongltd.com . All rights reserved (designed by <a href="https://ftcjsc.com/" target="_blank" style="color: white;">FTC joint stock company </a>)</p>
                 </div>
                 <!--footer social icons-->
                 <div class="col-sm-5 clearfix">
