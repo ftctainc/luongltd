@@ -82,14 +82,14 @@
                 <!--footer social icons-->
                 <div class="col-sm-5 clearfix">
                     <ul class="footer-social-nav">
-                        <li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li>
-                        <li><a target="_blank" href="skype:skypeusername?add"><i class="fa fa-skype"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-rss"></i></a></li>
+                        <!-- <li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li> -->
+                        <li><a target="_blank" href="https://www.facebook.com/Luong-ltd-C%C3%94NG-TY-TNHH-T%C6%AF-V%E1%BA%A4N-QU%E1%BA%A2N-L%C3%9D-L%C6%AF%C6%A0NG-1898132090502740/?ref=bookmarks"><i class="fa fa-facebook"></i></a></li>
+                        <li><a target="_blank" href="https://plus.google.com/u/3/114532283339257840371"><i class="fa fa-google-plus"></i></a></li>
+                        <!-- <li><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li> -->
+                        <!-- <li><a target="_blank" href="#"><i class="fa fa-instagram"></i></a></li> -->
+                        <!-- <li><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li> -->
+                        <li><a target="_blank" href="skype:nguyen.tai26?add"><i class="fa fa-skype"></i></a></li>
+                        <!-- <li><a target="_blank" href="#"><i class="fa fa-rss"></i></a></li> -->
                     </ul>
                 </div>
             </div>
