@@ -92,7 +92,7 @@
                 <cms:show news_content />
             </div>
 
-            <footer class="entry-footer">
+            <!-- <footer class="entry-footer">
                 <p class="entry-meta">
                     <span class="entry-categories">
                         <i class="fa fa-folder-o"></i>&nbsp; <cms:breadcrumbs/>
@@ -103,7 +103,7 @@
                         <a href="#" rel="tag">kids health</a>
                     </span>
                 </p>
-            </footer>
+            </footer> -->
         </div>
     </article>
 

@@ -7,8 +7,10 @@
     <cms:set g_phone_number=phone_number 'global'/>
     <cms:set g_news_background=news_background 'global' />
 </cms:pages>
-<cms:template title="Tổ chức chứng nhận" clonable="1">
-    <cms:editable name="organization_content" label='Nội dung' desc='Nội dung tổ chức chứng nhận' type="richtext" />
+<cms:template title="Câu hỏi thường gặp" clonable="1">
+    <cms:editable name="qa_content" label='Nội dung' desc='Nội dung câu hỏi' type="richtext" />
+    <cms:editable name="qa_description" label='Mô tả nội dung' desc='Mô tả nội dung câu hỏi' type="richtext" />
+    <cms:editable name="img_header" label='Hình ảnh đầu trang' desc='Hình ảnh đầu trang' type="image" />
 </cms:template>
 <cms:if k_is_page>
 <!DOCTYPE html>
@@ -32,21 +34,11 @@
                 <nav class="bread-crumb">
                     <ul class="breadcrumb clearfix">
                         <li><a href="<cms:link masterpage='index.php' />">Trang chủ</a><span class="divider"></span></li>
-                        <li><a href="<cms:link masterpage='tin-tuc.php' />" title="Tin tiêu điểm">Tin tiêu điểm</a><span class="divider"></span></li>
+                        <li><a href="<cms:link masterpage='cau-hoi-thuong-gap.php' />" title="Câu hỏi thường gặp">Câu hỏi thường gặp</a><span class="divider"></span></li>
                         <li><cms:breadcrumbs/><span class="divider"></span></li>
                         <li><li class="active"><cms:show k_page_title /></li>
                     </ul>
                 </nav>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-5 ">
-                <div id="search" class="widget clearfix">
-                    <form method="get" id="search-form" class="search-form" action="#">
-                        <div>
-                            <input type="text" name="s" id="search-text" placeholder="Search"/>
-                            <input type="submit" id="search-submit" value=""/>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
     </div>
@@ -70,19 +62,18 @@
         <div class="right-contents">
             <header class="entry-header">
 
-                <figure>
+                <!-- <figure>
                     <a class="swipebox" href="<cms:show img_header />" title="Hình ảnh mô tả">
                         <img src="<cms:show img_header />" class="attachment-blog-page wp-post-image" alt="Hình ảnh mô tả" />
                     </a>
-                </figure>
+                </figure> -->
 
                 <h1 class="entry-title"><cms:show k_page_title /></h1>
             </header>
 
             <div class="entry-content">
-                <cms:show news_content />
+                <cms:show qa_content />
             </div>
-
         </div>
     </article>
 
@@ -120,6 +111,6 @@
 </body>
 </html>
 <cms:else />
-<cms:embed '../../tin-tuc.php' />
+<cms:embed '../../cau-hoi-thuong-gap.php' />
 </cms:if>
 <?php COUCH::invoke(); ?>
