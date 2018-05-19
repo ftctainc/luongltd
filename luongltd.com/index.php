@@ -150,14 +150,14 @@
                                         </span>
                                     </cms:pages>
                                 </div>
-                                <div class="home-right-menu-boder" style="margin-top: 2em">
+                                <!-- <div class="home-right-menu-boder" style="margin-top: 2em">
                                     <h3 class="home-right-menu" style="margin-top 20px;">Tổ chức chứng nhận</h3>
                                     <cms:pages masterpage="chi-tiet-to-chuc-chung-nhan.php" paginate='0'>
                                         <span class="prd-lst">
                                             <a class="fa fa-chevron-circle-right" href="#"> <cms:show k_page_title /></a>
                                         </span>
                                     </cms:pages>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         
